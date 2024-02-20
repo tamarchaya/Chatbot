@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Area_of_circle;
+
 
 namespace Infrastructure
 {
@@ -49,7 +51,11 @@ namespace Infrastructure
             {
                 return new CountWordPlugin();
             }
-            else
+            else if (id == Area_of_circlePlugin._Id)
+            {
+                return new Area_of_circlePlugin();
+            }
+            else 
 
             {
                 throw new NotImplementedException();
@@ -64,7 +70,8 @@ namespace Infrastructure
             EchoPlugin._Id,
             ListPlugin.ListPlugin._Id,
             CountTheWordsPlugin._Id,
-            CountWordPlugin._Id
+            CountWordPlugin._Id,
+            Area_of_circlePlugin._Id
         };
     }
 }
